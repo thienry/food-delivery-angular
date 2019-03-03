@@ -1,20 +1,19 @@
 <!-- INÍCIO DO CONTEÚDO -->
 <section class="content-header">
-  <h1>
-
-  </h1>
+  <h1></h1>
 </section>
 
-
 <section class="content">
-
   <div class="row">
     <div class="col-xs-12">
       <div class="box box-solid">
         <div class="box-header with-border">
           <i class="fa fa-home"></i>
 
-          <h3 class="box-title">{{ restaurant?.name }}</h3><span class="pull-right"><i class="fa fa-star"></i>{{ restaurant?.rating }}</span>
+          <h3 class="box-title">{{ restaurant?.name }}</h3>
+          <span class="pull-right"
+            ><i class="fa fa-star"></i>{{ restaurant?.rating }}</span
+          >
         </div>
         <!-- /.box-header -->
         <div class="box-body" *ngIf="restaurant">
@@ -33,23 +32,20 @@
         </div>
         <!-- /.box-body -->
         <div class="box-footer detail-footer">
-          <a class="pull-left detail-active" href="detail-restaurant.html">
+          <a class="pull-left" [routerLinkActive]="['menu']" [routerLink]="['menu']">
             Menu
           </a>
-          <a class="pull-right" href="detail-restaurant-reviews.html">
+          <a class="pull-right" [routerLinkActive]="['reviews']" [routerLink]="['reviews']">
             Avaliações
           </a>
         </div>
       </div>
     </div>
     <!-- /.col-xs-12 -->
-
   </div>
-
 
   <div class="row">
-    <mt-menu></mt-menu>
+    <router-outlet></router-outlet>
   </div>
-
 </section>
 <!-- FIM DO CONTEÚDO -->
