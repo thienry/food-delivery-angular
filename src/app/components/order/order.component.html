@@ -95,6 +95,7 @@
               [options]="paymentOptions"
               name="paymentOption"
               ngModel
+              required
             ></mt-radio>
           </div>
         </div>
@@ -114,8 +115,8 @@
     <div class="row">
       <div class="col-xs-12">
         <button
-          href="order-summary.html"
-          [disabled]="!form.valid"
+          [routerLink]="['#']"
+          [disabled]="!form.valid || cartItems().length === 0"
           class="btn btn-success pull-right"
         >
           <i class="fa fa-credit-card"></i> Concluir Pedido
