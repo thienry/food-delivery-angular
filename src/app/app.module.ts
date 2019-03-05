@@ -18,10 +18,7 @@ import { ShoppingCartComponent } from "./components/restaurant-detail/shopping-c
 import { MenuItemComponent } from "./components/restaurant-detail/menu-item/menu-item.component";
 import { ReviewsComponent } from "./components/restaurant-detail/reviews/reviews.component";
 import { ShoppingCartService } from "./components/restaurant-detail/shopping-cart/shopping-cart.service";
-import { OrderComponent } from "./components/order/order.component";
-import { OrderItemsComponent } from "./components/order/order-items/order-items.component";
 import { OrderService } from "./components/order/order.service";
-import { DeliveryCostsComponent } from "./components/order/delivery-costs/delivery-costs.component";
 import { OrderSummaryComponent } from "./components/order-summary/order-summary.component";
 import { SharedModule } from "./components/shared/shared.module";
 
@@ -38,9 +35,6 @@ import { SharedModule } from "./components/shared/shared.module";
     ShoppingCartComponent,
     MenuItemComponent,
     ReviewsComponent,
-    OrderComponent,
-    OrderItemsComponent,
-    DeliveryCostsComponent,
     OrderSummaryComponent,
   ],
   imports: [
