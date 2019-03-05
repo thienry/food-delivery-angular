@@ -57,7 +57,7 @@
             <input
               class="form-control"
               type="text"
-              name="optional"
+              name="optionalAddress"
               ngModel
               autocomplete="off"
               placeholder="Digite o Complemento"
@@ -115,7 +115,7 @@
     <div class="row">
       <div class="col-xs-12">
         <button
-          [routerLink]="['#']"
+          (click)="checkOrder(form.value)"
           [disabled]="!form.valid || cartItems().length === 0"
           class="btn btn-success pull-right"
         >
