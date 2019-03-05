@@ -1,10 +1,12 @@
 import { Routes } from "@angular/router";
+
 import { HomeComponent } from "./components/home/home.component";
 import { RestaurantsComponent } from "./components/restaurants/restaurants.component";
 import { RestaurantDetailComponent } from "./components/restaurant-detail/restaurant-detail.component";
 import { MenuComponent } from "./components/restaurant-detail/menu/menu.component";
 import { ReviewsComponent } from "./components/restaurant-detail/reviews/reviews.component";
 import { OrderSummaryComponent } from "./components/order-summary/order-summary.component";
+import { NotFoundComponent } from "./components/not-found/not-found.component";
 
 export const ROUTES: Routes = [
   { path: "", component: HomeComponent },
@@ -20,5 +22,6 @@ export const ROUTES: Routes = [
     ]
   },
   { path: "order", loadChildren: "./components/order/order.module#OrderModule" },
-  { path: "order-summary", component: OrderSummaryComponent }
+  { path: "order-summary", component: OrderSummaryComponent },
+  { path: "**", component: NotFoundComponent  }
 ];
