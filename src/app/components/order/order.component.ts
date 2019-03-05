@@ -104,6 +104,5 @@ export class OrderComponent implements OnInit {
       this.router.navigate(["/order-summary"]);
       this.orderService.clear();
     });
-    console.log(order);
   }
 }
