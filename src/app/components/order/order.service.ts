@@ -38,7 +38,7 @@ export class OrderService {
     this.cartService.clear();
   }
 
-  checkOrder(order: Order): Observable<string> {
+  checkOrder(order: Order): Observable<Order> {
     const headers = new Headers();
     headers.append("ContentType", "application/json");
 
@@ -48,6 +48,7 @@ export class OrderService {
         JSON.stringify(order),
         new RequestOptions({ headers })
       )
-      .map(response => response.json());
+      .map(response => response.json())
+      .map(order => order.id);
   }
 }
