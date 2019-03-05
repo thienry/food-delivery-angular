@@ -9,7 +9,6 @@ import { ROUTES } from "./app.routes";
 import { AppComponent } from "./app.component";
 import { HeaderComponent } from "./components/header/header.component";
 import { HomeComponent } from "./components/home/home.component";
-import { AboutComponent } from "./components/about/about.component";
 import { RestaurantsComponent } from "./components/restaurants/restaurants.component";
 import { RestaurantComponent } from "./components/restaurants/restaurant/restaurant.component";
 import { SpinnerComponent } from "./components/spinner/spinner.component";
@@ -34,7 +33,6 @@ import { RatingComponent } from "./components/shared/rating/rating.component";
     AppComponent,
     HeaderComponent,
     HomeComponent,
-    AboutComponent,
     RestaurantsComponent,
     RestaurantComponent,
     SpinnerComponent,
