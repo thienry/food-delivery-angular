@@ -2,6 +2,7 @@ import { BrowserModule } from "@angular/platform-browser";
 import { NgModule, LOCALE_ID } from "@angular/core";
 import { HttpModule } from "@angular/http";
 import { RouterModule, PreloadAllModules } from "@angular/router";
+import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 
 import { ROUTES } from "./app.routes";
 
@@ -17,7 +18,7 @@ import { ShoppingCartComponent } from "./components/restaurant-detail/shopping-c
 import { MenuItemComponent } from "./components/restaurant-detail/menu-item/menu-item.component";
 import { ReviewsComponent } from "./components/restaurant-detail/reviews/reviews.component";
 import { OrderSummaryComponent } from "./components/order-summary/order-summary.component";
- 
+
 import { SharedModule } from "./components/shared/shared.module";
 
 @NgModule({
@@ -33,17 +34,16 @@ import { SharedModule } from "./components/shared/shared.module";
     ShoppingCartComponent,
     MenuItemComponent,
     ReviewsComponent,
-    OrderSummaryComponent,
+    OrderSummaryComponent
   ],
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
     HttpModule,
     RouterModule.forRoot(ROUTES, { preloadingStrategy: PreloadAllModules }),
-    SharedModule.forRoot(),
+    SharedModule.forRoot()
   ],
-  providers: [
-    { provide: LOCALE_ID, useValue: "pt-BR" }
-  ],
+  providers: [{ provide: LOCALE_ID, useValue: "pt-BR" }],
   bootstrap: [AppComponent]
 })
 export class AppModule {}
