@@ -16,7 +16,7 @@ import { Restaurant } from "./restaurant.model";
     trigger("restaurantAppeared", [
       state("ready", style({ opacity: 1 })),
       transition("void => ready", [
-        style({ ocuty: 0, transform: "translate(-30px, -10px)" }),
+        style({ opacity: 0, transform: "translate(-30px, -10px)" }),
         animate("250ms 0s ease-in-out")
       ])
     ])
