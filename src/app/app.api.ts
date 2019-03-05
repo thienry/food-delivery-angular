@@ -1,1 +1,3 @@
-export const FD_API = "http://localhost:3000";
+import { environment } from "../environments/environment"
+
+export const FD_API = environment.api
