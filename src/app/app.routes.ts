@@ -7,10 +7,15 @@ import { MenuComponent } from "./components/restaurant-detail/menu/menu.componen
 import { ReviewsComponent } from "./components/restaurant-detail/reviews/reviews.component";
 import { OrderSummaryComponent } from "./components/order-summary/order-summary.component";
 import { NotFoundComponent } from "./components/not-found/not-found.component";
+import { LoginComponent } from "./components/security/login/login.component";
 
 export const ROUTES: Routes = [
   { path: "", component: HomeComponent },
-  { path: "about", loadChildren: "./components/about/about.module#AboutModule" },
+  { path: "login", component: LoginComponent },
+  {
+    path: "about",
+    loadChildren: "./components/about/about.module#AboutModule"
+  },
   { path: "restaurants", component: RestaurantsComponent },
   {
     path: "restaurants/:id",
@@ -21,7 +26,10 @@ export const ROUTES: Routes = [
       { path: "reviews", component: ReviewsComponent }
     ]
   },
-  { path: "order", loadChildren: "./components/order/order.module#OrderModule" },
+  {
+    path: "order",
+    loadChildren: "./components/order/order.module#OrderModule"
+  },
   { path: "order-summary", component: OrderSummaryComponent },
-  { path: "**", component: NotFoundComponent  }
+  { path: "**", component: NotFoundComponent }
 ];
