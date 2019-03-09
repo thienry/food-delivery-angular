@@ -1,5 +1,5 @@
 import { Injectable } from "@angular/core";
-import { Http, Headers, RequestOptions } from "@angular/http";
+import { HttpClient } from "@angular/common/http";
 
 import { Observable } from "rxjs/Observable";
 
@@ -12,7 +12,7 @@ import { FD_API } from "../../app.api";
 
 @Injectable()
 export class OrderService {
-  constructor(private cartService: ShoppingCartService, private http: Http) {}
+  constructor(private cartService: ShoppingCartService, private http: HttpClient) {}
 
   cartItems(): CartItem[] {
     return this.cartService.items;
@@ -38,17 +38,7 @@ export class OrderService {
     this.cartService.clear();
   }
 
-  checkOrder(order: Order): Observable<Order> {
-    const headers = new Headers();
-    headers.append("ContentType", "application/json");
-
-    return this.http
-      .post(
-        `${FD_API}/orders`,
-        JSON.stringify(order),
-        new RequestOptions({ headers })
-      )
-      .map(response => response.json())
-      .map(order => order.id);
+  checkOrder(order: Order): Observable<string> {
+    return this.http.post<Order>(`${FD_API}/orders`, order).map(order => order.id);
   }
 }

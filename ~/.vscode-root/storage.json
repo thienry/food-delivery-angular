@@ -8,5 +8,25 @@
             "file:///home/thienry/%C3%81rea%20de%20Trabalho/food-delivery-angular"
         ],
         "files2": []
+    },
+    "windowsState": {
+        "openedWindows": [],
+        "lastActiveWindow": {
+            "folderUri": {
+                "$mid": 1,
+                "fsPath": "/home/thienry/Área de Trabalho/food-delivery-angular",
+                "external": "file:///home/thienry/%C3%81rea%20de%20Trabalho/food-delivery-angular",
+                "path": "/home/thienry/Área de Trabalho/food-delivery-angular",
+                "scheme": "file"
+            },
+            "backupPath": "/home/thienry/Área de Trabalho/food-delivery-angular/~/.vscode-root/Backups/5ba3e8bdc98c0ac053b98b924cae5013",
+            "uiState": {
+                "mode": 1,
+                "x": 1091,
+                "y": 27,
+                "width": 829,
+                "height": 1053
+            }
+        }
     }
 }
