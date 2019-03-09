@@ -1,6 +1,8 @@
 import * as jsonServer from "json-server";
 import { Express } from "express";
 
+import { handleAuthentication } from "./auth";
+
 import * as fs from "fs";
 import * as https from "https";
 
@@ -27,7 +29,8 @@ server.use((req, res, next) => {
   next();
 });
 
-//Middlewares AQUI!!!
+//Middlewares para login
+server.post("/login", handleAuthentication);
 
 // Use default router
 server.use(router);

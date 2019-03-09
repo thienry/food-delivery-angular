@@ -1,6 +1,7 @@
 "use strict";
 exports.__esModule = true;
 var jsonServer = require("json-server");
+var auth_1 = require("./auth");
 var fs = require("fs");
 var https = require("https");
 var server = jsonServer.create();
@@ -22,7 +23,8 @@ server.use(function (req, res, next) {
     // Continue to JSON Server router
     next();
 });
-//Middlewares AQUI!!!
+//Middlewares para login
+server.post("/login", auth_1.handleAuthentication);
 // Use default router
 server.use(router);
 var options = {
