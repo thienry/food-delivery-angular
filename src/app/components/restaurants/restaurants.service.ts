@@ -15,9 +15,9 @@ import { ErrorHandler } from "app/app.error-handler";
 export class RestaurantService {
   constructor(private http: Http) {}
 
-  restaurants(): Observable<Restaurant[]> {
+  restaurants(search?: string): Observable<Restaurant[]> {
     return this.http
-      .get(`${FD_API}/restaurants`)
+      .get(`${FD_API}/restaurants`, { params: { q: search } })
       .map(response => response.json())
       .catch(ErrorHandler.handleError);
   }

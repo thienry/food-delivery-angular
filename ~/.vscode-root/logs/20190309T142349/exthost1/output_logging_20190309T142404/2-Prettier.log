@@ -1,0 +1,22 @@
+09/03/2019 14:37:43:
+--------------------
+Expression expected. (/home/thienry/Área de Trabalho/food-delivery-angular/src/app/components/restaurants/restaurants.component.ts:53:5)
+  51 |     this.searchControl.valueChanges.subscribe(searchTerm =>
+  52 |       
+> 53 |     );
+     |     ^
+  54 | 
+  55 |     this.restaurantService
+  56 |       .restaurants()
+
+09/03/2019 14:37:44:
+--------------------
+Expression expected. (/home/thienry/Área de Trabalho/food-delivery-angular/src/app/components/restaurants/restaurants.component.ts:53:5)
+  51 |     this.searchControl.valueChanges.subscribe(searchTerm =>
+  52 |       
+> 53 |     );
+     |     ^
+  54 | 
+  55 |     this.restaurantService
+  56 |       .restaurants()
+

@@ -1,0 +1,48 @@
+[2019-03-09 14:23:50.837] [exthost] [info] extension host started
+[2019-03-09 14:23:50.854] [exthost] [info] ExtensionService#_doActivateExtension vscode.debug-auto-launch {"startup":true,"activationEvent":"*"}
+[2019-03-09 14:23:50.854] [exthost] [info] ExtensionService#loadCommonJSModule /usr/share/code/resources/app/extensions/debug-auto-launch/dist/extension
+[2019-03-09 14:23:50.857] [exthost] [info] ExtensionService#_doActivateExtension vscode.emmet {"startup":true,"activationEvent":"*"}
+[2019-03-09 14:23:50.857] [exthost] [info] ExtensionService#loadCommonJSModule /usr/share/code/resources/app/extensions/emmet/dist/extension
+[2019-03-09 14:23:50.871] [exthost] [info] ExtensionService#_doActivateExtension vscode.git {"startup":true,"activationEvent":"*"}
+[2019-03-09 14:23:50.871] [exthost] [info] ExtensionService#loadCommonJSModule /usr/share/code/resources/app/extensions/git/dist/main
+[2019-03-09 14:23:50.950] [exthost] [info] ExtensionService#_doActivateExtension vscode.merge-conflict {"startup":true,"activationEvent":"*"}
+[2019-03-09 14:23:50.950] [exthost] [info] ExtensionService#loadCommonJSModule /usr/share/code/resources/app/extensions/merge-conflict/dist/extension
+[2019-03-09 14:23:50.955] [exthost] [info] ExtensionService#_doActivateExtension esbenp.prettier-vscode {"startup":true,"activationEvent":"*"}
+[2019-03-09 14:23:50.955] [exthost] [info] ExtensionService#loadCommonJSModule /home/thienry/.vscode/extensions/esbenp.prettier-vscode-1.8.1/out/src/extension
+[2019-03-09 14:23:51.076] [exthost] [info] ExtensionService#_doActivateExtension PKief.material-icon-theme {"startup":true,"activationEvent":"*"}
+[2019-03-09 14:23:51.076] [exthost] [info] ExtensionService#loadCommonJSModule /home/thienry/.vscode/extensions/pkief.material-icon-theme-3.6.3/out/src/extension
+[2019-03-09 14:23:51.100] [exthost] [info] ExtensionService#_doActivateExtension ritwickdey.LiveServer {"startup":true,"activationEvent":"*"}
+[2019-03-09 14:23:51.100] [exthost] [info] ExtensionService#loadCommonJSModule /home/thienry/.vscode/extensions/ritwickdey.liveserver-5.5.1/out/src/extension
+[2019-03-09 14:23:51.304] [exthost] [info] eager extensions activated
+[2019-03-09 14:23:52.891] [exthost] [info] ExtensionService#_doActivateExtension vscode.configuration-editing {"startup":false,"activationEvent":"onLanguage:jsonc"}
+[2019-03-09 14:23:52.891] [exthost] [info] ExtensionService#loadCommonJSModule /usr/share/code/resources/app/extensions/configuration-editing/dist/extension
+[2019-03-09 14:23:52.897] [exthost] [info] ExtensionService#_doActivateExtension vscode.json-language-features {"startup":false,"activationEvent":"onLanguage:jsonc"}
+[2019-03-09 14:23:52.898] [exthost] [info] ExtensionService#loadCommonJSModule /usr/share/code/resources/app/extensions/json-language-features/client/dist/jsonMain
+[2019-03-09 14:23:52.958] [exthost] [info] ExtensionService#_doActivateExtension vscode.typescript-language-features {"startup":false,"activationEvent":"onLanguage:jsonc"}
+[2019-03-09 14:23:52.958] [exthost] [info] ExtensionService#loadCommonJSModule /usr/share/code/resources/app/extensions/typescript-language-features/dist/extension
+[2019-03-09 14:24:04.889] [exthost] [info] extension host started
+[2019-03-09 14:24:04.903] [exthost] [info] ExtensionService#_doActivateExtension vscode.debug-auto-launch {"startup":true,"activationEvent":"*"}
+[2019-03-09 14:24:04.903] [exthost] [info] ExtensionService#loadCommonJSModule /usr/share/code/resources/app/extensions/debug-auto-launch/dist/extension
+[2019-03-09 14:24:04.907] [exthost] [info] ExtensionService#_doActivateExtension vscode.emmet {"startup":true,"activationEvent":"*"}
+[2019-03-09 14:24:04.907] [exthost] [info] ExtensionService#loadCommonJSModule /usr/share/code/resources/app/extensions/emmet/dist/extension
+[2019-03-09 14:24:04.921] [exthost] [info] ExtensionService#_doActivateExtension vscode.git {"startup":true,"activationEvent":"*"}
+[2019-03-09 14:24:04.921] [exthost] [info] ExtensionService#loadCommonJSModule /usr/share/code/resources/app/extensions/git/dist/main
+[2019-03-09 14:24:05.012] [exthost] [info] ExtensionService#_doActivateExtension vscode.merge-conflict {"startup":true,"activationEvent":"*"}
+[2019-03-09 14:24:05.012] [exthost] [info] ExtensionService#loadCommonJSModule /usr/share/code/resources/app/extensions/merge-conflict/dist/extension
+[2019-03-09 14:24:05.017] [exthost] [info] ExtensionService#_doActivateExtension esbenp.prettier-vscode {"startup":true,"activationEvent":"*"}
+[2019-03-09 14:24:05.017] [exthost] [info] ExtensionService#loadCommonJSModule /home/thienry/.vscode/extensions/esbenp.prettier-vscode-1.8.1/out/src/extension
+[2019-03-09 14:24:05.158] [exthost] [info] ExtensionService#_doActivateExtension PKief.material-icon-theme {"startup":true,"activationEvent":"*"}
+[2019-03-09 14:24:05.158] [exthost] [info] ExtensionService#loadCommonJSModule /home/thienry/.vscode/extensions/pkief.material-icon-theme-3.6.3/out/src/extension
+[2019-03-09 14:24:05.187] [exthost] [info] ExtensionService#_doActivateExtension ritwickdey.LiveServer {"startup":true,"activationEvent":"*"}
+[2019-03-09 14:24:05.187] [exthost] [info] ExtensionService#loadCommonJSModule /home/thienry/.vscode/extensions/ritwickdey.liveserver-5.5.1/out/src/extension
+[2019-03-09 14:24:05.416] [exthost] [info] eager extensions activated
+[2019-03-09 14:24:27.527] [exthost] [info] ExtensionService#_doActivateExtension vscode.extension-editing {"startup":false,"activationEvent":"onLanguage:typescript"}
+[2019-03-09 14:24:27.527] [exthost] [info] ExtensionService#loadCommonJSModule /usr/share/code/resources/app/extensions/extension-editing/dist/extension
+[2019-03-09 14:24:27.566] [exthost] [info] ExtensionService#_doActivateExtension vscode.typescript-language-features {"startup":false,"activationEvent":"onLanguage:typescript"}
+[2019-03-09 14:24:27.566] [exthost] [info] ExtensionService#loadCommonJSModule /usr/share/code/resources/app/extensions/typescript-language-features/dist/extension
+[2019-03-09 14:24:31.187] [exthost] [info] ExtensionService#_doActivateExtension vscode.configuration-editing {"startup":false,"activationEvent":"onLanguage:jsonc"}
+[2019-03-09 14:24:31.187] [exthost] [info] ExtensionService#loadCommonJSModule /usr/share/code/resources/app/extensions/configuration-editing/dist/extension
+[2019-03-09 14:24:31.194] [exthost] [info] ExtensionService#_doActivateExtension vscode.json-language-features {"startup":false,"activationEvent":"onLanguage:jsonc"}
+[2019-03-09 14:24:31.194] [exthost] [info] ExtensionService#loadCommonJSModule /usr/share/code/resources/app/extensions/json-language-features/client/dist/jsonMain
+[2019-03-09 14:28:13.694] [exthost] [info] ExtensionService#_doActivateExtension vscode.html-language-features {"startup":false,"activationEvent":"onLanguage:html"}
+[2019-03-09 14:28:13.694] [exthost] [info] ExtensionService#loadCommonJSModule /usr/share/code/resources/app/extensions/html-language-features/client/dist/htmlMain
