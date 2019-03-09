@@ -2,5 +2,6 @@
     "workbench.iconTheme": "material-icon-theme",
     "files.autoSave": "afterDelay",
     "editor.formatOnPaste": true,
-    "editor.formatOnSave": true
+    "editor.formatOnSave": true,
+    "window.zoomLevel": 0
 }

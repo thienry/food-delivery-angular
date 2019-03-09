@@ -2,8 +2,11 @@
 <section class="content-header">
   <h1>
     Todos os Restaurantes
-    <a (click)="toggleSearch()" class="search-link pull-right"
-      ><i class="fa fa-search"></i
+    <a (click)="toggleSearch()" class="search-link pull-right"></a>
+      <span *ngIf="iptSearch.value">
+        <small>" {{ iptSearch.value }} "</small>
+      </span>
+      <i class="fa fa-search"></i
     ></a>
   </h1>
   <!-- Barra de Pesquisa  -->
@@ -13,6 +16,7 @@
         <div class="form-group">
           <input
             type="text"
+            #iptSearch
             formControlName="searchControl"
             name=""
             class="form-control"
