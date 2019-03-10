@@ -24,6 +24,7 @@ import { Restaurant } from "./restaurant.model";
 })
 export class RestaurantComponent implements OnInit {
   restaurantState = "ready"
+  
 
   @Input() restaurant: Restaurant;
 

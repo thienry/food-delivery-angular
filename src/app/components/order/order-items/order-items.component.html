@@ -1,6 +1,7 @@
 <div class="col-xs-12" *ngIf="items.length === 0">
   <p>
-    Não há items no seu carrinho. Que tal começar por <a [routerLink]="['/restaurants']"> aqui</a>?
+    Não há items no seu carrinho. Que tal começar por
+    <a [routerLink]="['/restaurants']"> aqui</a>?
   </p>
 </div>
 
@@ -29,7 +30,9 @@
         <td>{{ item.menuItem.name }}</td>
 
         <td>{{ item.menuItem.description }}</td>
-        <td class="text-right">{{ item.value() | currency: "BRL":true }}</td>
+        <td class="text-right">
+          {{ item.value() | currency: "BRL":"symbol" }}
+        </td>
         <td class="text-right">
           <a (click)="emitRemove(item)" class="btn btn-sm danger"
             ><i class="fa fa-remove"></i

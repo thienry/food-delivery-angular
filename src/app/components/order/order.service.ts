@@ -1,7 +1,8 @@
 import { Injectable } from "@angular/core";
 import { HttpClient } from "@angular/common/http";
 
-import { Observable } from "rxjs/Observable";
+import { Observable } from "rxjs";
+import { map } from "rxjs/operators";
 
 import { ShoppingCartService } from "../restaurant-detail/shopping-cart/shopping-cart.service";
 import { CartItem } from "../restaurant-detail/shopping-cart/cart-item.model";
@@ -12,7 +13,10 @@ import { FD_API } from "../../app.api";
 
 @Injectable()
 export class OrderService {
-  constructor(private cartService: ShoppingCartService, private http: HttpClient) {}
+  constructor(
+    private cartService: ShoppingCartService,
+    private http: HttpClient
+  ) {}
 
   cartItems(): CartItem[] {
     return this.cartService.items;
@@ -39,6 +43,8 @@ export class OrderService {
   }
 
   checkOrder(order: Order): Observable<string> {
-    return this.http.post<Order>(`${FD_API}/orders`, order).map(order => order.id);
+    return this.http
+      .post<Order>(`${FD_API}/orders`, order)
+      .pipe(map(order => order.id));
   }
 }
