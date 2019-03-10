@@ -23,6 +23,7 @@ import { OrderSummaryComponent } from "./components/order-summary/order-summary.
 import { SharedModule } from "./components/shared/shared.module";
 import { NotFoundComponent } from "./components/not-found/not-found.component";
 import { LoginComponent } from './components/security/login/login.component';
+import { UserDetailsComponent } from './components/header/user-details/user-details.component';
 
 @NgModule({
   declarations: [
@@ -39,7 +40,8 @@ import { LoginComponent } from './components/security/login/login.component';
     ReviewsComponent,
     OrderSummaryComponent,
     NotFoundComponent,
-    LoginComponent
+    LoginComponent,
+    UserDetailsComponent
   ],
   imports: [
     BrowserModule,
