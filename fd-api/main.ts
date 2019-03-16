@@ -1,15 +1,14 @@
-import * as restify from "restify";
+import { Server } from "./server/server";
 
-const server = restify.createServer({
-  name: "fd-api",
-  version: "1.0.0"
-});
+const server = new Server();
 
-server.get("/hello", (req, res, next) => {
-  res.json({ message: "Hello Word" });
-  return next();
-});
-
-server.listen(3000, () => {
-    console.log("API is running on http://localhost:3000")
-})
+server
+  .bootstrap()
+  .then(server => {
+    console.log("Server is running on: ", server.application.address());
+  })
+  .catch(error => {
+    console.log("Server failed to start");
+    console.error(error);
+    process.exit(0);
+  });

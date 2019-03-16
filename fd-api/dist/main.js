@@ -1,14 +1,14 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-const restify = require("restify");
-const server = restify.createServer({
-    name: "fd-api",
-    version: "1.0.0"
-});
-server.get("/hello", (req, res, next) => {
-    res.json({ message: "Hello Word" });
-    return next();
-});
-server.listen(3000, () => {
-    console.log("API is running on http://localhost:3000");
+const server_1 = require("./server/server");
+const server = new server_1.Server();
+server
+    .bootstrap()
+    .then(server => {
+    console.log("Server is running on: ", server.application.address());
+})
+    .catch(error => {
+    console.log("Server failed to start");
+    console.error(error);
+    process.exit(0);
 });
