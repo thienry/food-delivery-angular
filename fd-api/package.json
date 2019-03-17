@@ -7,12 +7,14 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "author": "Thiago Moura",
+  "license": "MIT",
   "dependencies": {
+    "mongoose": "4.13.9",
     "restify": "6.3.4"
   },
   "devDependencies": {
+    "@types/mongoose": "4.7.32",
     "@types/restify": "^5.0.6"
   }
 }
