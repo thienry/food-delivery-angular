@@ -32,8 +32,8 @@ class UsersRouter extends router_1.Router {
             const options = { overwrite: true };
             users_model_1.User.update({ _id: req.params.id }, req.body, options)
                 .exec()
-                .then(result => {
-                if (result.n) {
+                .then((cmdResult) => {
+                if (cmdResult.result.n) {
                     return users_model_1.User.findById(req.params.id);
                 }
                 else {
@@ -56,6 +56,19 @@ class UsersRouter extends router_1.Router {
                     res.send(404);
                     return next();
                 }
+            });
+        });
+        application.del("/users/:id", (req, res, next) => {
+            users_model_1.User.remove({ _id: req.params.id })
+                .exec()
+                .then((cmdResult) => {
+                if (cmdResult.result.n) {
+                    res.send(204);
+                }
+                else {
+                    res.send(404);
+                }
+                return next();
             });
         });
     }
