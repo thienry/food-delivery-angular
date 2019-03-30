@@ -1,7 +1,6 @@
 import * as restify from "restify";
 import { BadRequestError } from "restify-errors";
 
-
 const mpContentType = "application/merge-patch+json";
 
 export const mergePatchBodyParser = (
