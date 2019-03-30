@@ -46,7 +46,7 @@ export abstract class ModelRouter<D extends mongoose.Document> extends Router {
           res.json(document);
           return next();
         } else {
-          throw new NotFoundError("Documento não encontrado!");
+          throw new NotFoundError("Document not found");
         }
       })
       .then(this.render(res, next))
@@ -69,7 +69,7 @@ export abstract class ModelRouter<D extends mongoose.Document> extends Router {
         if (cmdResult.result.n) {
           res.send(204);
         } else {
-          throw new NotFoundError("Documento não encontrado!");
+          throw new NotFoundError("Document not found");
         }
         return next();
       })

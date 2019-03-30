@@ -23,7 +23,7 @@ const menuSchema = new mongoose.Schema({
 
 const restSchema = new mongoose.Schema({
   name: {
-    tyoe: String,
+    type: String,
     required: true
   },
   menu: {

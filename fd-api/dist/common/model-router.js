@@ -44,7 +44,7 @@ class ModelRouter extends router_1.Router {
                     return next();
                 }
                 else {
-                    throw new restify_errors_1.NotFoundError("Documento não encontrado!");
+                    throw new restify_errors_1.NotFoundError("Document not found");
                 }
             })
                 .then(this.render(res, next))
@@ -66,7 +66,7 @@ class ModelRouter extends router_1.Router {
                     res.send(204);
                 }
                 else {
-                    throw new restify_errors_1.NotFoundError("Documento não encontrado!");
+                    throw new restify_errors_1.NotFoundError("Document not found");
                 }
                 return next();
             })
