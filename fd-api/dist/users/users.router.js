@@ -11,7 +11,7 @@ class UsersRouter extends model_router_1.ModelRouter {
         });
     }
     applyRoutes(application) {
-        application.get("/users", [this.validateId, this.findAll]);
+        application.get("/users", this.findAll);
         application.get("/users/:id", [this.validateId, this.findById]);
         application.post("/users", [this.validateId, this.save]);
         application.put("/users/:id", [this.validateId, this.replace]);

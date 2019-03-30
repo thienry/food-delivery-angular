@@ -40,7 +40,7 @@ class RestaurantsRouter extends ModelRouter<Restaurant> {
   };
 
   applyRoutes(application: restify.Server) {
-    application.get("/restaurants", [this.validateId, this.findAll]);
+    application.get("/restaurants", this.findAll);
     application.get("/restaurants/:id", [this.validateId, this.findById]);
     application.post("/restaurants", [this.validateId, this.save]);
     application.put("/restaurants/:id", [this.validateId, this.replace]);

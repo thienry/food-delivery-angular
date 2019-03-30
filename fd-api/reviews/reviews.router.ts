@@ -8,12 +8,20 @@ class ReviewsRouter extends ModelRouter<Review> {
     super(Review);
   }
 
+  findById = (req, res, next) => {
+    this.model
+      .findById(req.params.id)
+      .populate("user", "name")
+      .populate("restaurants", "name")
+      .then(this.render(res, next))
+      .catch(next);
+  };
+
   applyRoutes(application: restify.Server) {
-    application.get("/reviews", [this.validateId, this.findAll]);
+    application.get("/reviews", this.findAll);
     application.get("/reviews/:id", [this.validateId, this.findById]);
-    application.post("/reviews", [this.validateId, this.save]);
-    application.put("/reviews/:id", [this.validateId, this.replace]);
-    application.patch("/reviews/:id", [this.validateId, this.update]);
-    application.del("/reviews/:id", [this.validateId, this.delete]);
+    application.post("/reviews", this.save);
   }
 }
+
+export const reviewsRouter = new ReviewsRouter();

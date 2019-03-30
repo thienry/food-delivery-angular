@@ -10,7 +10,7 @@ class Router extends events_1.EventEmitter {
                 response.json(document);
             }
             else {
-                throw new restify_errors_1.NotFoundError("Documento não encontrado!");
+                throw new restify_errors_1.NotFoundError("Document not found");
             }
             return next();
         };

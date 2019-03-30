@@ -38,7 +38,7 @@ class RestaurantsRouter extends model_router_1.ModelRouter {
         };
     }
     applyRoutes(application) {
-        application.get("/restaurants", [this.validateId, this.findAll]);
+        application.get("/restaurants", this.findAll);
         application.get("/restaurants/:id", [this.validateId, this.findById]);
         application.post("/restaurants", [this.validateId, this.save]);
         application.put("/restaurants/:id", [this.validateId, this.replace]);
