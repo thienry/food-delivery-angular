@@ -10,7 +10,7 @@ export class Server {
 
   initializeDb(): mongoose.MongooseThenable {
     (<any>mongoose).Promise = global.Promise;
-    return mongoose.connect(environment.db.url, { useMongoClient: true });
+    return mongoose.connect(environment.db.url);
   }
 
   initRoutes(routers: Router[]): Promise<any> {
@@ -34,8 +34,7 @@ export class Server {
           resolve(this.application);
         });
 
-        this.application.on("restifyError", handleError)
-
+        this.application.on("restifyError", handleError);
       } catch (error) {
         reject(error);
       }
@@ -46,5 +45,9 @@ export class Server {
     return this.initializeDb().then(() =>
       this.initRoutes(routers).then(() => this)
     );
+  }
+
+  shutDown() {
+    return mongoose.disconnect().then(() => this.application.close());
   }
 }
