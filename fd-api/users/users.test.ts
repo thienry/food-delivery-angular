@@ -1,9 +1,5 @@
 import "jest";
 import * as request from "supertest";
-import { Server } from "../server/server";
-import { environment } from "../common/environment";
-import { usersRouter } from "./users.router";
-import { User } from "./users.model";
 
 let address: string = (<any>global).address
 
