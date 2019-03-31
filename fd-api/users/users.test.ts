@@ -52,6 +52,40 @@ test("post /users", () => {
     .catch(fail);
 });
 
+test("get /users/whatever - not found", () => {
+  return request(address)
+    .get("/users/whatever")
+    .then(response => {
+      expect(response.status).toBe(404);
+    })
+    .catch(fail);
+});
+
+test("patch /users/:id", () => {
+  return request(address)
+    .post("/users")
+    .send({
+      name: "test2",
+      email: "test2@test.com",
+      password: "test123"
+    })
+    .then(response =>
+      request(address)
+        .patch(`/users/${response.body._id}`)
+        .send({
+          name: "test2 - patch"
+        })
+        .then(response => {
+          expect(response.status).toBe(200);
+          expect(response.body._id).toBeDefined();
+          expect(response.body.name).toBe("test2 - patch");
+          expect(response.body.email).toBe("test2@test.com");
+          expect(response.body.password).toBeUndefined();
+        })
+    )
+    .catch(fail);
+});
+
 afterAll(() => {
   return server.shutDown();
 });
