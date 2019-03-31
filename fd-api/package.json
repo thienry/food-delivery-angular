@@ -11,7 +11,8 @@
   "license": "MIT",
   "jest": {
     "globals": {
-      "address": "http://localhost:3001"
+      "address": "http://localhost:3001",
+      "auth": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJiYmVudG92aWN0b3JkYW5pbG9tb3JlaXJhQGRvbWFpbi5jb20uYnIiLCJpc3MiOiJmZC1hcGkiLCJpYXQiOjE1NTQwNTAxNzB9.OdUlOtHsGw51KVm664R_smsG0OkdrBJJEmWAqFkL86Q"
     },
     "testEnvironment": "node",
     "transform": {

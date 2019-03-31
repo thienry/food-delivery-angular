@@ -5,9 +5,9 @@ import { environment } from "../common/environment";
 const address: string = (<any>global).address;
 const auth: string = (<any>global).auth;
 
-test("get /reviews", () => {
+test("get /restaurants", () => {
   return request(address)
-    .get("/reviews")
+    .get("/restaurants")
     .set("Authorization", auth)
     .then(response => {
       expect(response.status).toBe(200);

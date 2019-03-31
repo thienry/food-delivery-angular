@@ -14,10 +14,11 @@ class Server {
     initRoutes(routers) {
         return new Promise((resolve, reject) => {
             try {
-                this.application = restify.createServer({
+                const options = {
                     name: "fd-api",
                     version: "1.0.0"
-                });
+                };
+                this.application = restify.createServer(options);
                 this.application.use(restify.plugins.queryParser());
                 this.application.use(restify.plugins.bodyParser());
                 this.application.use(merge_patch_parser_1.mergePatchBodyParser);
